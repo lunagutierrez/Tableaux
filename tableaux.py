@@ -123,7 +123,6 @@ def es_literal(f):
         return True
     elif f.label == '-' and f.right.label in letrasProposicionales :
         return True
-    
     return False
 
 def no_literales(l):
@@ -132,10 +131,12 @@ def no_literales(l):
 	# Input: l, una lista de fórmulas como árboles
 	# Output: None/f, tal que f no es literal
 
-   for j in l:
-        if es_literal(j) == False:
-            return j
-        return
+   for i in l:
+       if (es_literal(i) == False):
+            return i
+
+   return None
+
 
 def clasifica(f):
     if f.label == '-':
@@ -248,5 +249,3 @@ def Tableaux(f):
 
     return listaInterpsVerdaderas
         
-
-f = Inorder2Tree('-(pO(rYs))')
